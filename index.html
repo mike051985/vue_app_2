@@ -12,12 +12,19 @@
 <body>
     <div id="app">
         <div class="container">
-            <h1>{{ title }}</h1>
+            <header-display title="Task Tracker"></header-display>
+            <tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"></tasks>
         </div>
     </div>
 
     <!-- Import App -->
     <script src="./app.js"></script>
+
+    <!-- Import Components -->
+    <script src="./components/HeaderDisplay.js"></script>
+    <script src="./components/ButtonDisplay.js"></script>
+    <script src="./components/Tasks.js"></script>
+    <script src="./components/Task.js"></script>
 
     <!-- Mount App -->
     <script>
