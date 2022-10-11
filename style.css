@@ -96,12 +96,3 @@ header {
     flex: 2;
     height: 20px;
   }
-
-  /* Footer */
-  a {
-    color: #333;
-  }
-  footer {
-    margin-top: 30px;
-    text-align: center;
-  }
