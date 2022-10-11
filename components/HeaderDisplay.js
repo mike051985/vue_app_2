@@ -6,7 +6,12 @@ app.component('header-display', {
     /*html*/
     `<header>
         <h1>{{ title }}</h1>
-        <button-display text="Add Task" color="green"></button-display>
+        <button-display 
+            @btn-click="$emit('toggle-add-task')" 
+            text="Add Task" 
+            color="green"
+        >
+        </button-display>
     </header>
     `
 })

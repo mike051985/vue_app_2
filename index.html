@@ -12,8 +12,20 @@
 <body>
     <div id="app">
         <div class="container">
-            <header-display title="Task Tracker"></header-display>
-            <tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"></tasks>
+            <header-display 
+                @toggle-add-task="toggleAddTask" 
+                title="Task Tracker" 
+            >
+            </header-display>
+            <div v-show="showAddTask">
+                <add-task @add-task="addTask"></add-task>
+            </div>
+            <tasks 
+                @toggle-reminder="toggleReminder" 
+                @delete-task="deleteTask" 
+                :tasks="tasks"
+            >
+            </tasks>
         </div>
     </div>
 
@@ -25,6 +37,7 @@
     <script src="./components/ButtonDisplay.js"></script>
     <script src="./components/Tasks.js"></script>
     <script src="./components/Task.js"></script>
+    <script src="./components/AddTask.js"></script>
 
     <!-- Mount App -->
     <script>
