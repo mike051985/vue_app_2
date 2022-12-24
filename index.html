@@ -15,6 +15,7 @@
             <header-display 
                 @toggle-add-task="toggleAddTask" 
                 title="Task Tracker"
+                :showAddTask="showAddTask"
             >
             </header-display>
             <div v-show="showAddTask">

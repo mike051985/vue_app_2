@@ -1,6 +1,7 @@
 app.component('header-display', {
     props: {
-        title: String
+        title: String,
+        showAddTask: Boolean
     },
     template:
     /*html*/
@@ -8,8 +9,8 @@ app.component('header-display', {
         <h1>{{ title }}</h1>
         <button-display 
             @btn-click="$emit('toggle-add-task')"
-            text="Add Task"
-            color="green"
+            text= "Add Task"
+            color="green" 
         >       
         </button-display>
     </header>
