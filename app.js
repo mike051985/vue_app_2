@@ -2,6 +2,7 @@ const app = Vue.createApp({
     data() {
         return {
             tasks: [],
+            //task: "",
             showAddTask: false,
             
         }
@@ -13,10 +14,12 @@ const app = Vue.createApp({
         addTask(task) {
             this.tasks = [...this.tasks, task]
         },
+        
         deleteTask(id) {
             if (confirm('Are you sure?')) {
                 this.tasks = this.tasks.filter((task) => task.id !== id)
             } 
+
         },
         toggleReminder(id) {
             this.tasks = this.tasks.map((task) => task.id === id ? {...task, reminder: !task.reminder} : task)
